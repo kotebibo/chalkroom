@@ -95276,7 +95276,7 @@ async function callTool(name, rawArgs, ctx) {
 var isToolResult = (x) => !!x && typeof x === "object" && Array.isArray(x.content);
 
 // packages/server/src/index.ts
-var VERSION2 = "0.1.0";
+var VERSION2 = "0.1.1";
 var here = dirname2(fileURLToPath(import.meta.url));
 var log = (...a) => console.error("[chalk]", ...a);
 function arg(name) {

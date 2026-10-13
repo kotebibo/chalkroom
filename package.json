@@ -1,6 +1,6 @@
 {
   "name": "chalkroom",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "AI classroom for Claude Code: your own session becomes a tutor with a whiteboard, voice, quizzes, flashcards and a course library. Local-only.",
   "license": "MIT",
   "author": "GeoSafety",

@@ -21,7 +21,7 @@ import { TurnManager } from './turns.js';
 import { WebServer } from './web.js';
 import { toolList, callTool, type ToolContext } from './tools.js';
 
-const VERSION = '0.1.0';
+const VERSION = '0.1.1';
 const here = dirname(fileURLToPath(import.meta.url));
 // stdout belongs to the MCP protocol; everything else goes to stderr
 const log = (...a: unknown[]) => console.error('[chalk]', ...a);
