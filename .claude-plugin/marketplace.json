@@ -1,0 +1,17 @@
+{
+  "name": "chalkroom",
+  "owner": {
+    "name": "GeoSafety"
+  },
+  "plugins": [
+    {
+      "name": "chalkroom",
+      "source": "./",
+      "description": "AI classroom for Claude Code: whiteboard, voice, quizzes, flashcards and a course library, all local."
+    }
+  ],
+  "description": "Chalkroom: an AI classroom plugin for Claude Code.",
+  "metadata": {
+    "description": "Chalkroom: an AI classroom plugin for Claude Code."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "chalkroom",
+  "version": "0.1.0",
+  "description": "AI classroom for Claude Code: your session becomes a tutor with a whiteboard, voice, quizzes, flashcards and a course library.",
+  "author": { "name": "GeoSafety" },
+  "license": "MIT",
+  "homepage": "https://github.com/kotebibo/chalkroom",
+  "repository": "https://github.com/kotebibo/chalkroom",
+  "keywords": ["education", "tutor", "whiteboard", "flashcards", "channels"],
+  "mcpServers": {
+    "chalk": {
+      "command": "node",
+      "args": ["${CLAUDE_PLUGIN_ROOT}/dist/server.mjs"],
+      "env": { "CHALK_COURSE_DIR": "${CLAUDE_PROJECT_DIR}" }
+    }
+  },
+  "channels": [
+    { "server": "chalk", "displayName": "Chalkroom" }
+  ]
+}

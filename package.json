@@ -1,0 +1,59 @@
+{
+  "name": "chalkroom",
+  "version": "0.1.0",
+  "description": "AI classroom for Claude Code: your own session becomes a tutor with a whiteboard, voice, quizzes, flashcards and a course library. Local-only.",
+  "license": "MIT",
+  "author": "GeoSafety",
+  "homepage": "https://github.com/kotebibo/chalkroom",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kotebibo/chalkroom.git"
+  },
+  "keywords": [
+    "claude-code",
+    "claude-code-plugin",
+    "tutor",
+    "education",
+    "whiteboard",
+    "flashcards",
+    "spaced-repetition",
+    "mcp"
+  ],
+  "type": "module",
+  "bin": {
+    "chalkroom": "dist/cli.mjs"
+  },
+  "files": [
+    "dist",
+    "templates",
+    "skills",
+    "commands",
+    ".claude-plugin",
+    "docs",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build:web && npm run build:server",
+    "build:web": "npm run build -w @chalk/web",
+    "build:server": "node scripts/build-server.mjs",
+    "dev:web": "npm run dev -w @chalk/web",
+    "dev:mock": "node scripts/build-server.mjs && node dist/server.mjs --mock --course examples/courses/solana-dev",
+    "typecheck": "tsc -p tsconfig.json && tsc -p packages/web/tsconfig.json",
+    "test": "vitest run",
+    "prepublishOnly": "npm run typecheck && npm run build && npm test"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "esbuild": "^0.28.2",
+    "playwright-core": "^1.64.0",
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.11"
+  }
+}

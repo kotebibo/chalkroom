@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__plugin_chalkroom_chalk",
+      "Read",
+      "Edit(./**/*.md)",
+      "Write(./lessons/**)",
+      "Write(./syllabus.md)"
+    ]
+  }
+}

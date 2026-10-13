@@ -1,0 +1,17 @@
+{
+  "name": "@chalk/server",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@chalk/schema": "*",
+    "@chalk/board": "*",
+    "@chalk/ingest": "*",
+    "@chalk/mock-tutor": "*",
+    "@modelcontextprotocol/sdk": "^1.32.0",
+    "ws": "^8.18.0",
+    "zod": "^4.1.0"
+  },
+  "devDependencies": { "@types/ws": "^8.5.0" }
+}

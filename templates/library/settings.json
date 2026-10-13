@@ -1,0 +1,8 @@
+{
+  "theme": "chalkboard",
+  "ttsProvider": "browser",
+  "voice": "",
+  "speed": 1,
+  "textOnly": false,
+  "dailyReviewTime": "09:00"
+}

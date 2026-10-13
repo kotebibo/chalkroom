@@ -1,0 +1,8 @@
+node_modules/
+*.log
+.env
+packages/*/dist/
+coverage/
+test-results/
+shots/
+*.tgz
