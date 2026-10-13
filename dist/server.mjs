@@ -95370,7 +95370,9 @@ Create one with: chalkroom new "Topic"`);
     turns.setConnection("disconnected");
     console.log(`Chalkroom (no tutor) is open at ${url2}`);
   }
-  if (!flag("--no-open") && !process.env.CHALK_NO_OPEN) openBrowser(url2);
+  if (!flag("--no-open") && !process.env.CHALK_NO_OPEN) {
+    setTimeout(() => openBrowser(url2), mode === "mcp" ? 2500 : 0);
+  }
 }
 function openBrowser(url2) {
   const [cmd, args] = process.platform === "win32" ? ["cmd", ["/c", "start", '""', url2]] : process.platform === "darwin" ? ["open", [url2]] : ["xdg-open", [url2]];

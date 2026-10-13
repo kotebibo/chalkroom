@@ -115,7 +115,11 @@ async function main() {
     console.log(`Chalkroom (no tutor) is open at ${url}`);
   }
 
-  if (!flag('--no-open') && !process.env.CHALK_NO_OPEN) openBrowser(url);
+  if (!flag('--no-open') && !process.env.CHALK_NO_OPEN) {
+    // Health checks (e.g. `claude mcp list`) start and stop the server within a
+    // second; the process exits when stdin closes, so only real sessions get a tab.
+    setTimeout(() => openBrowser(url), mode === 'mcp' ? 2500 : 0);
+  }
 }
 
 function openBrowser(url: string) {

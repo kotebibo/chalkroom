@@ -22,7 +22,7 @@ Requires Claude Code **v2.1.80+** (channels), logged in with a Claude account, a
 /plugin install chalkroom@chalkroom
 
 # 2. Install the CLI and create a course
-npm i -g chalkroom
+npm i -g chalkroom            # or: npm i -g github:kotebibo/chalkroom
 chalkroom new "Linear algebra" --goal "Ready for ML maths in 6 weeks; I know calculus"
 
 # 3. Start class: opens Claude Code in the course folder with the Chalkroom channel
